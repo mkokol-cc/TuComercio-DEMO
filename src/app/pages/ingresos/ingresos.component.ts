@@ -111,7 +111,7 @@ export class IngresosComponent implements OnInit {
           ...result,
           id: Date.now(),
           fecha: new Date(),
-          usuario: 'matias.admin',
+          usuario: 'admin',
           totalCantidad: result.items.reduce((acc: number, item: any) => acc + item.cantidad, 0)
         };
         this.ingresos.unshift(nuevoIngreso);

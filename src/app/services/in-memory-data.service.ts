@@ -6,11 +6,11 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
     const clientes = [
-      { id: 1, razonSocial: 'Juan Pérez', cuitDni: '20-33444555-1', telefono: '11 5566-7788', direccion: 'Calle Falsa 123, CABA', activo: true, observaciones: 'Cliente habitual, siempre paga a término.', ultimaCompra: '2026-06-10T00:00:00.000Z', cantidadCompras: 15, cuentaCorriente: { id: 1, movimientos: [] } },
-      { id: 2, razonSocial: 'Villaplast Distribuidora', cuitDni: '30-11222333-4', telefono: '11 4455-6677', direccion: 'Av. Corrientes 500, CABA', activo: true, observaciones: 'Requiere factura A.', ultimaCompra: '2026-05-25T00:00:00.000Z', cantidadCompras: 42, cuentaCorriente: { id: 2, movimientos: [] } },
-      { id: 3, razonSocial: 'María García', cuitDni: '27-99888777-2', telefono: '11 2233-4455', activo: false, ultimaCompra: '2025-12-15T00:00:00.000Z', cantidadCompras: 3, cuentaCorriente: { id: 3, movimientos: [] } },
-      { id: 4, razonSocial: 'Carlos Rodríguez', cuitDni: '20-55667788-3', telefono: '11 7788-9900', direccion: 'Belgrano 850, CABA', activo: true, observaciones: 'Nuevo cliente, referido por Juan Pérez.', ultimaCompra: '2026-06-20T00:00:00.000Z', cantidadCompras: 2, cuentaCorriente: { id: 4, movimientos: [] } },
-      { id: 5, razonSocial: 'Comercial del Oeste SRL', cuitDni: '30-99887766-1', telefono: '11 3344-5566', direccion: 'Av. Rivadavia 12000, Merlo', activo: true, observaciones: 'Empresa de logística, compras por mayor.', ultimaCompra: '2026-06-25T00:00:00.000Z', cantidadCompras: 8, cuentaCorriente: { id: 5, movimientos: [] } },
+      { id: 1, razonSocial: 'Cliente Habitual', cuitDni: '20-33444555-1', telefono: '11 111-1111', direccion: 'Domicilio 1', activo: true, observaciones: 'Cliente habitual, siempre paga a término.', ultimaCompra: '2026-06-10T00:00:00.000Z', cantidadCompras: 15, cuentaCorriente: { id: 1, movimientos: [] } },
+      { id: 2, razonSocial: 'Cliente Mayorista', cuitDni: '30-11222333-4', telefono: '11 111-1112', direccion: 'Domicilio Mayorista', activo: true, observaciones: 'Requiere factura A.', ultimaCompra: '2026-05-25T00:00:00.000Z', cantidadCompras: 42, cuentaCorriente: { id: 2, movimientos: [] } },
+      { id: 3, razonSocial: 'Cliente Particular', cuitDni: '27-99888777-2', telefono: '11 111-1113', activo: false, ultimaCompra: '2025-12-15T00:00:00.000Z', cantidadCompras: 3, cuentaCorriente: { id: 3, movimientos: [] } },
+      { id: 4, razonSocial: 'Cliente Referido', cuitDni: '20-55667788-3', telefono: '11 111-1114', direccion: 'Domicilio 4', activo: true, observaciones: 'Nuevo cliente, referido por otro cliente.', ultimaCompra: '2026-06-20T00:00:00.000Z', cantidadCompras: 2, cuentaCorriente: { id: 4, movimientos: [] } },
+      { id: 5, razonSocial: 'Cliente Corporativo', cuitDni: '30-99887766-1', telefono: '11 111-1115', direccion: 'Domicilio Corporativo', activo: true, observaciones: 'Empresa de logística, compras por mayor.', ultimaCompra: '2026-06-25T00:00:00.000Z', cantidadCompras: 8, cuentaCorriente: { id: 5, movimientos: [] } },
     ];
 
     const productos = [
@@ -37,17 +37,17 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const proveedores = [
-      { id: 1, razonSocial: 'Distribuidora Villaplast', cuit: '30-12345678-9', telefono: '011 4567-8900', direccion: 'Av. Corrientes 1234, CABA', activo: true, ultimaCompra: '2026-06-12T00:00:00.000Z', observaciones: 'Proveedor principal de bolsas y descartables.', saldoPendiente: 15000 },
-      { id: 2, razonSocial: 'Papelera Norte', cuit: '30-98765432-1', telefono: '011 4321-0011', direccion: 'Ruta 8 Km 50, Pilar', activo: true, ultimaCompra: '2026-05-20T00:00:00.000Z', observaciones: 'Entregas solo los martes.', saldoPendiente: 8000 },
-      { id: 3, razonSocial: 'Insumos Pro', cuit: '20-11223344-5', telefono: '0230 445-6677', activo: false, ultimaCompra: '2025-11-30T00:00:00.000Z', observaciones: 'Cuenta suspendida por cambio de firma.', saldoPendiente: 0 },
-      { id: 4, razonSocial: 'Plásticos del Sur', cuit: '30-55667788-2', telefono: '011 5678-9012', direccion: 'Av. Mitre 3400, Avellaneda', activo: true, ultimaCompra: '2026-06-18T00:00:00.000Z', observaciones: 'Especialistas en plásticos descartables.', saldoPendiente: 5000 },
-      { id: 5, razonSocial: 'Envases S.A.', cuit: '30-11223344-6', telefono: '011 6789-0123', direccion: 'Calle 12 N° 450, La Plata', activo: true, ultimaCompra: '2026-06-28T00:00:00.000Z', observaciones: 'Envases y packaging en general.', saldoPendiente: 0 },
+      { id: 1, razonSocial: 'Proveedor Principal', cuit: '30-12345678-9', telefono: '011 111-1111', direccion: 'Depósito Central', activo: true, ultimaCompra: '2026-06-12T00:00:00.000Z', observaciones: 'Proveedor principal de bolsas y descartables.', saldoPendiente: 15000 },
+      { id: 2, razonSocial: 'Proveedor Regional', cuit: '30-98765432-1', telefono: '011 111-1112', direccion: 'Planta Norte', activo: true, ultimaCompra: '2026-05-20T00:00:00.000Z', observaciones: 'Entregas solo los martes.', saldoPendiente: 8000 },
+      { id: 3, razonSocial: 'Proveedor Inactivo', cuit: '20-11223344-5', telefono: '011 111-1113', activo: false, ultimaCompra: '2025-11-30T00:00:00.000Z', observaciones: 'Cuenta suspendida por cambio de firma.', saldoPendiente: 0 },
+      { id: 4, razonSocial: 'Proveedor Especializado', cuit: '30-55667788-2', telefono: '011 111-1114', direccion: 'Planta Sur', activo: true, ultimaCompra: '2026-06-18T00:00:00.000Z', observaciones: 'Proveedor de insumos descartables.', saldoPendiente: 5000 },
+      { id: 5, razonSocial: 'Proveedor Envases', cuit: '30-11223344-6', telefono: '011 111-1115', direccion: 'Depósito Este', activo: true, ultimaCompra: '2026-06-28T00:00:00.000Z', observaciones: 'Envases y packaging en general.', saldoPendiente: 0 },
     ];
 
     const ventas = [
       {
         id: 4582, fecha: '2026-06-15T14:20:00.000Z',
-        cliente: { id: 1, razonSocial: 'Juan Pérez', cuitDni: '20-33444555-1', activo: true },
+        cliente: { id: 1, razonSocial: 'Cliente Habitual', cuitDni: '20-33444555-1', activo: true },
         items: [
           { id: 1, producto: { id: 15, descripcion: 'Bolsas Consorcio 60x90', precioVenta: 1200, stockActual: 100, activo: true, codigoInterno: 'BOL001' }, cantidad: 5, precioUnitario: 1200, subtotal: 6000 },
           { id: 2, producto: { id: 16, descripcion: 'Cinta Embalar 48x100', precioVenta: 850, stockActual: 50, activo: true, codigoInterno: 'CIN001' }, cantidad: 2, precioUnitario: 850, subtotal: 1700 },
@@ -58,7 +58,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 4583, fecha: '2026-06-16T09:15:00.000Z',
-        cliente: { id: 2, razonSocial: 'Papelera Norte', cuitDni: '30-98765432-1', activo: true },
+        cliente: { id: 2, razonSocial: 'Proveedor Regional', cuitDni: '30-98765432-1', activo: true },
         items: [
           { id: 3, producto: { id: 17, descripcion: 'Rollo Cocina x3', precioVenta: 1500, stockActual: 200, activo: true, codigoInterno: 'ROL001' }, cantidad: 10, precioUnitario: 1500, subtotal: 15000 },
         ],
@@ -70,7 +70,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 4584, fecha: '2026-06-20T11:00:00.000Z',
-        cliente: { id: 3, razonSocial: 'María García', cuitDni: '27-99888777-2', activo: false },
+        cliente: { id: 3, razonSocial: 'Cliente Particular', cuitDni: '27-99888777-2', activo: false },
         items: [
           { id: 4, producto: { id: 1, descripcion: 'Pan Artesanal', precioVenta: 1200, stockActual: 20, activo: true, codigoInterno: 'PAN001' }, cantidad: 3, precioUnitario: 1200, subtotal: 3600 },
           { id: 5, producto: { id: 6, descripcion: 'Jugo de Naranja', precioVenta: 1800, stockActual: 30, activo: true, codigoInterno: 'JUG001' }, cantidad: 2, precioUnitario: 1800, subtotal: 3600 },
@@ -81,7 +81,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 4585, fecha: '2026-06-22T16:30:00.000Z',
-        cliente: { id: 4, razonSocial: 'Carlos Rodríguez', cuitDni: '20-55667788-3', activo: true },
+        cliente: { id: 4, razonSocial: 'Cliente Referido', cuitDni: '20-55667788-3', activo: true },
         items: [
           { id: 6, producto: { id: 11, descripcion: 'Aceite de Girasol', precioVenta: 2500, stockActual: 12, activo: true, codigoInterno: 'ACE001' }, cantidad: 5, precioUnitario: 2500, subtotal: 12500 },
           { id: 7, producto: { id: 8, descripcion: 'Agua Mineral 1.5L', precioVenta: 600, stockActual: 60, activo: true, codigoInterno: 'AGU001' }, cantidad: 10, precioUnitario: 600, subtotal: 6000 },
@@ -92,7 +92,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 4586, fecha: '2026-06-25T08:45:00.000Z',
-        cliente: { id: 5, razonSocial: 'Comercial del Oeste SRL', cuitDni: '30-99887766-1', activo: true },
+        cliente: { id: 5, razonSocial: 'Cliente Corporativo', cuitDni: '30-99887766-1', activo: true },
         items: [
           { id: 8, producto: { id: 12, descripcion: 'Detergente Ropa', precioVenta: 3200, stockActual: 18, activo: true, codigoInterno: 'DET001' }, cantidad: 8, precioUnitario: 3200, subtotal: 25600 },
           { id: 9, producto: { id: 19, descripcion: 'Vasos Descartables x50', precioVenta: 800, stockActual: 80, activo: true, codigoInterno: 'VAS001' }, cantidad: 20, precioUnitario: 800, subtotal: 16000 },
@@ -105,8 +105,8 @@ export class InMemoryDataService implements InMemoryDbService {
     const ingresos = [
       {
         id: 1, fecha: '2026-06-10T10:30:00.000Z',
-        proveedor: { id: 1, razonSocial: 'Distribuidora Villaplast', cuit: '30-12345678-9', activo: true },
-        numeroRemito: 'R-0001-00004562', usuario: 'matias.admin', totalCantidad: 150,
+        proveedor: { id: 1, razonSocial: 'Proveedor Principal', cuit: '30-12345678-9', activo: true },
+        numeroRemito: 'R-0001-00004562', usuario: 'admin', totalCantidad: 150,
         items: [
           { producto: { id: 15, descripcion: 'Bolsas Consorcio 60x90', stockActual: 500, activo: true, codigoInterno: 'BOL001' }, cantidad: 100 },
           { producto: { id: 18, descripcion: 'Papel Higiénico Premium x4', stockActual: 200, activo: true, codigoInterno: 'PHP001' }, cantidad: 50 },
@@ -114,16 +114,16 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 2, fecha: '2026-06-12T15:45:00.000Z',
-        proveedor: { id: 2, razonSocial: 'Papelera Norte', cuit: '30-98765432-1', activo: true },
-        numeroRemito: 'R-0002-00001234', usuario: 'esteban.user', totalCantidad: 80,
+        proveedor: { id: 2, razonSocial: 'Proveedor Regional', cuit: '30-98765432-1', activo: true },
+        numeroRemito: 'R-0002-00001234', usuario: 'operador', totalCantidad: 80,
         items: [
           { producto: { id: 17, descripcion: 'Rollo Cocina x3', stockActual: 300, activo: true, codigoInterno: 'ROL001' }, cantidad: 80 },
         ],
       },
       {
         id: 3, fecha: '2026-06-18T09:00:00.000Z',
-        proveedor: { id: 4, razonSocial: 'Plásticos del Sur', cuit: '30-55667788-2', activo: true },
-        numeroRemito: 'R-0003-00007890', usuario: 'matias.admin', totalCantidad: 350,
+        proveedor: { id: 4, razonSocial: 'Proveedor Especializado', cuit: '30-55667788-2', activo: true },
+        numeroRemito: 'R-0003-00007890', usuario: 'admin', totalCantidad: 350,
         items: [
           { producto: { id: 19, descripcion: 'Vasos Descartables x50', stockActual: 80, activo: true, codigoInterno: 'VAS001' }, cantidad: 200 },
           { producto: { id: 20, descripcion: 'Servilletas x100', stockActual: 120, activo: true, codigoInterno: 'SER001' }, cantidad: 150 },
@@ -131,8 +131,8 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 4, fecha: '2026-06-22T14:20:00.000Z',
-        proveedor: { id: 1, razonSocial: 'Distribuidora Villaplast', cuit: '30-12345678-9', activo: true },
-        numeroRemito: 'R-0004-00005678', usuario: 'esteban.user', totalCantidad: 130,
+        proveedor: { id: 1, razonSocial: 'Proveedor Principal', cuit: '30-12345678-9', activo: true },
+        numeroRemito: 'R-0004-00005678', usuario: 'operador', totalCantidad: 130,
         items: [
           { producto: { id: 1, descripcion: 'Pan Artesanal', stockActual: 20, activo: true, codigoInterno: 'PAN001' }, cantidad: 30 },
           { producto: { id: 2, descripcion: 'Leche Entera', stockActual: 50, activo: true, codigoInterno: 'LEC001' }, cantidad: 60 },
@@ -141,8 +141,8 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 5, fecha: '2026-06-28T11:30:00.000Z',
-        proveedor: { id: 5, razonSocial: 'Envases S.A.', cuit: '30-11223344-6', activo: true },
-        numeroRemito: 'R-0005-00003456', usuario: 'matias.admin', totalCantidad: 200,
+        proveedor: { id: 5, razonSocial: 'Proveedor Envases', cuit: '30-11223344-6', activo: true },
+        numeroRemito: 'R-0005-00003456', usuario: 'admin', totalCantidad: 200,
         items: [
           { producto: { id: 20, descripcion: 'Servilletas x100', stockActual: 120, activo: true, codigoInterno: 'SER001' }, cantidad: 200 },
         ],
@@ -171,18 +171,18 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const compras = [
-      { id: 1, fecha: '2026-06-10T10:30:00.000Z', proveedor: { id: 1, razonSocial: 'Distribuidora Villaplast', cuit: '30-12345678-9', activo: true }, total: 180000, items: [
+      { id: 1, fecha: '2026-06-10T10:30:00.000Z', proveedor: { id: 1, razonSocial: 'Proveedor Principal', cuit: '30-12345678-9', activo: true }, total: 180000, items: [
         { id: 1, producto: { id: 15, descripcion: 'Bolsas Consorcio 60x90', codigoInterno: 'BOL001' }, cantidad: 100, costoUnitario: 700, subtotal: 70000 },
         { id: 2, producto: { id: 18, descripcion: 'Papel Higiénico Premium x4', codigoInterno: 'PHP001' }, cantidad: 50, costoUnitario: 1200, subtotal: 60000 },
       ]},
-      { id: 2, fecha: '2026-06-12T15:45:00.000Z', proveedor: { id: 2, razonSocial: 'Papelera Norte', cuit: '30-98765432-1', activo: true }, total: 64000, items: [
+      { id: 2, fecha: '2026-06-12T15:45:00.000Z', proveedor: { id: 2, razonSocial: 'Proveedor Regional', cuit: '30-98765432-1', activo: true }, total: 64000, items: [
         { id: 3, producto: { id: 17, descripcion: 'Rollo Cocina x3', codigoInterno: 'ROL001' }, cantidad: 80, costoUnitario: 800, subtotal: 64000 },
       ]},
-      { id: 3, fecha: '2026-06-18T09:00:00.000Z', proveedor: { id: 4, razonSocial: 'Plásticos del Sur', cuit: '30-55667788-2', activo: true }, total: 140000, items: [
+      { id: 3, fecha: '2026-06-18T09:00:00.000Z', proveedor: { id: 4, razonSocial: 'Proveedor Especializado', cuit: '30-55667788-2', activo: true }, total: 140000, items: [
         { id: 4, producto: { id: 19, descripcion: 'Vasos Descartables x50', codigoInterno: 'VAS001' }, cantidad: 200, costoUnitario: 400, subtotal: 80000 },
         { id: 5, producto: { id: 20, descripcion: 'Servilletas x100', codigoInterno: 'SER001' }, cantidad: 150, costoUnitario: 400, subtotal: 60000 },
       ]},
-      { id: 4, fecha: '2026-06-22T14:20:00.000Z', proveedor: { id: 1, razonSocial: 'Distribuidora Villaplast', cuit: '30-12345678-9', activo: true }, total: 99500, items: [
+      { id: 4, fecha: '2026-06-22T14:20:00.000Z', proveedor: { id: 1, razonSocial: 'Proveedor Principal', cuit: '30-12345678-9', activo: true }, total: 99500, items: [
         { id: 6, producto: { id: 1, descripcion: 'Pan Artesanal', codigoInterno: 'PAN001' }, cantidad: 30, costoUnitario: 600, subtotal: 18000 },
         { id: 7, producto: { id: 2, descripcion: 'Leche Entera', codigoInterno: 'LEC001' }, cantidad: 60, costoUnitario: 900, subtotal: 54000 },
         { id: 8, producto: { id: 6, descripcion: 'Jugo de Naranja', codigoInterno: 'JUG001' }, cantidad: 40, costoUnitario: 950, subtotal: 38000 },
