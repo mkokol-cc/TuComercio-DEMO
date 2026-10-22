@@ -18,7 +18,7 @@
           <div class="row g-3 flex-fill">
             <div class="col-md-6">
               <mat-form-field appearance="outline" class="w-100 no-subscript">
-                <mat-label>Buscar por nombre, código interno o barras...</mat-label>
+                <mat-label>Nombre o código</mat-label>
                 <input matInput [formControl]="searchControl" placeholder="Ej: Pan artesanal o 779..." (keyup.enter)="applyFilters()">
                 <mat-icon matPrefix class="me-2">search</mat-icon>
                 <button *ngIf="searchControl.value" matSuffix mat-icon-button type="button" (click)="searchControl.setValue('')">
